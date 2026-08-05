@@ -151,8 +151,7 @@ async function main() {
   console.log("Rendering page...");
   const html = await render(stories);
 
-  await fs.mkdir(new URL("../docs/", import.meta.url), { recursive: true });
-  await fs.writeFile(new URL("../docs/index.html", import.meta.url), html, "utf8");
+  await fs.writeFile(new URL("./index.html", import.meta.url), html, "utf8");
 
   console.log(`Done. Wrote ${stories.length} stories to docs/index.html`);
 }
