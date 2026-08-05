@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ledger — Daily Markets & Crypto Briefing</title>
+<meta name="description" content="A daily, four-minute briefing on stocks, crypto, and the economy.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+  :root{ --paper:#F6F1E7; --paper-dim:#EFE7D6; --ink:#1B1F2A; --ink-soft:#5B5748; --line:#D9CFB8; --gold:#B08D3C; }
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:'Source Serif 4', serif; }
+  .masthead{ border-bottom:3px double var(--ink); padding:22px 24px 14px; text-align:center; }
+  .masthead .eyebrow{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:2px; color:var(--ink-soft); text-transform:uppercase; }
+  .masthead h1{ font-family:'Newsreader', serif; font-weight:700; font-size:52px; margin:6px 0 4px; letter-spacing:-0.5px; }
+  .masthead .tagline{ font-family:'Newsreader', serif; font-style:italic; font-size:15px; color:var(--ink-soft); }
+  .masthead .meta-row{ display:flex; justify-content:space-between; margin-top:14px; font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:8px; }
+  .container{ max-width:1080px; margin:0 auto; padding:28px 24px 60px; display:flex; gap:32px; align-items:flex-start; }
+  .main{ flex:1; min-width:0; }
+  .sidebar{ width:280px; flex-shrink:0; }
+  .ad{ border:1px dashed var(--line); background:var(--paper-dim); display:flex; align-items:center; justify-content:center; flex-direction:column; color:var(--ink-soft); font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:1px; text-transform:uppercase; gap:4px; }
+  .ad-leaderboard{ height:90px; margin-bottom:28px; }
+  .ad-sidebar{ height:250px; margin-bottom:20px; }
+  .story{ padding:20px 0; border-bottom:1px solid var(--line); }
+  .story .kicker{ font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:1.5px; color:var(--gold); text-transform:uppercase; margin-bottom:6px; }
+  .story h2{ font-family:'Newsreader', serif; font-weight:600; font-size:24px; margin:0 0 8px; line-height:1.25; }
+  .story .dek{ color:var(--ink-soft); font-size:14.5px; line-height:1.6; margin:0 0 10px; }
+  .story .body p{ font-size:15px; line-height:1.7; margin:0; }
+  .widget{ background:var(--paper-dim); border:1px solid var(--line); border-radius:6px; padding:16px; margin-bottom:20px; }
+  .widget h3{ font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:1.5px; text-transform:uppercase; color:var(--ink-soft); margin:0 0 8px; }
+  .widget p{ font-size:13px; color:var(--ink-soft); line-height:1.6; margin:0; }
+  .disclaimer{ font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:16px; margin-top:10px; line-height:1.6; }
+  @media (max-width: 760px){ .container{ flex-direction:column; } .sidebar{ width:100%; } .masthead h1{ font-size:36px; } }
+</style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="eyebrow">Markets, Crypto & the Economy, Every Morning</div>
+    <h1>The Ledger</h1>
+    <div class="tagline">What moved money today — read in four minutes.</div>
+    <div class="meta-row"><span>{{DATE}}</span><span>DAILY BRIEFING</span></div>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      <div class="ad ad-leaderboard"><span>Advertisement</span></div>
+      {{STORIES}}
+      <div class="disclaimer">
+        THE LEDGER is a daily news summary for general information purposes only and is not
+        financial, investment, or trading advice. Always do your own research or consult a
+        licensed advisor before making investment decisions.
+      </div>
+    </main>
+    <aside class="sidebar">
+      <div class="ad ad-sidebar"><span>Advertisement</span></div>
+      <div class="widget">
+        <h3>About The Ledger</h3>
+        <p>An independent daily summary of markets and crypto news, built each morning from public reporting.</p>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>
